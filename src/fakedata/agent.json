@@ -1,0 +1,41 @@
+[
+  {
+    "agent": {
+      "adresse": {
+        "quartier": "Analamahitsy",
+        "ville": "Antsirabe"
+      },
+      "codeAgent": "HR8",
+      "nom": "Rakoto",
+      "prenom": "Fitiavana",
+      "dateNaiss": "Tue Apr 05 1990 08:30:00 GMT+0300",
+      "matriculeAgent": "IM88765"
+    }
+  },
+  {
+    "agent": {
+      "adresse": {
+        "quartier": "Isoraka",
+        "ville": "Antananarivo"
+      },
+      "codeAgent": "MK12",
+      "nom": "Rasoa",
+      "prenom": "Mialy",
+      "dateNaiss": "Wed Sep 15 1985 14:45:00 GMT+0300",
+      "matriculeAgent": "IM45678"
+    }
+  },
+  {
+    "agent": {
+      "adresse": {
+        "quartier": "Ambohipo",
+        "ville": "Toamasina"
+      },
+      "codeAgent": "TS3",
+      "nom": "Andriana",
+      "prenom": "Tiana",
+      "dateNaiss": "Mon Nov 20 1995 12:00:00 GMT+0300",
+      "matriculeAgent": "IM12345"
+    }
+  }
+]

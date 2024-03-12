@@ -1,0 +1,53 @@
+[
+  {
+    "utilisateur": {
+      "nom": "Smith",
+      "prenom": "John",
+      "email": "john.smith@example.com",
+      "dateNaissance": "Thu Aug 20 1987 14:10:00 GMT+0300",
+      "fonction": {
+        "poste": "Développeur",
+        "typeUtilisateur": "Admin"
+      },
+      "image": {
+        "data": "base64-encoded-image-data",
+        "contentType": "image/png"
+      },
+      "motsDePasse": "motdepasse123"
+    }
+  },
+  {
+    "utilisateur": {
+      "nom": "Johnson",
+      "prenom": "Alice",
+      "email": "alice.johnson@example.com",
+      "dateNaissance": "Sun Apr 05 1992 09:30:00 GMT+0300",
+      "fonction": {
+        "poste": "Analyste",
+        "typeUtilisateur": "Utilisateur"
+      },
+      "image": {
+        "data": "base64-encoded-image-data",
+        "contentType": "image/jpeg"
+      },
+      "motsDePasse": "securepassword456"
+    }
+  },
+  {
+    "utilisateur": {
+      "nom": "Davis",
+      "prenom": "Michael",
+      "email": "michael.davis@example.com",
+      "dateNaissance": "Sat Nov 15 1980 11:45:00 GMT+0300",
+      "fonction": {
+        "poste": "Manager",
+        "typeUtilisateur": "Superviseur"
+      },
+      "image": {
+        "data": "base64-encoded-image-data",
+        "contentType": "image/jpg"
+      },
+      "motsDePasse": "s3cureP@ss"
+    }
+  }
+]

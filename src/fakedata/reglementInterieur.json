@@ -1,0 +1,50 @@
+[
+  {
+    "reglementInterieur": {
+      "descriptionReglementInterieur": "Le présent règlement intérieur régit les relations au sein de l'établissement.",
+      "dateReglementInterieur": "Sun Mar 10 2024 19:40:05 GMT+0300",
+      "etablissement": {
+        "nomEtab": "Collège XYZ",
+        "nomChefEtab": "Isabelle Lacroix",
+        "caracteristiqueEtab": "Privé",
+        "adresseEtab": {
+          "ville": "Marseille",
+          "quartier": "Vieux-Port",
+          "codePostal": "13001"
+        }
+      }
+    }
+  },
+  {
+    "reglementInterieur": {
+      "descriptionReglementInterieur": "Toutes les parties prenantes doivent adhérer aux règles énoncées dans ce document.",
+      "dateReglementInterieur": "Sun Mar 10 2024 19:40:05 GMT+0300",
+      "etablissement": {
+        "nomEtab": "Lycée ABC",
+        "nomChefEtab": "Nicolas Martin",
+        "caracteristiqueEtab": "Public",
+        "adresseEtab": {
+          "ville": "Lyon",
+          "quartier": "Presqu'île",
+          "codePostal": "69001"
+        }
+      }
+    }
+  },
+  {
+    "reglementInterieur": {
+      "descriptionReglementInterieur": "Les sanctions en cas de non-respect du règlement sont précisées dans le présent document.",
+      "dateReglementInterieur": "Sun Mar 10 2024 19:40:05 GMT+0300",
+      "etablissement": {
+        "nomEtab": "École Primaire ABC",
+        "nomChefEtab": "Martin Durand",
+        "caracteristiqueEtab": "Public",
+        "adresseEtab": {
+          "ville": "Paris",
+          "quartier": "Marais",
+          "codePostal": "75001"
+        }
+      }
+    }
+  }
+]

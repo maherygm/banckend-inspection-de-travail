@@ -1,0 +1,38 @@
+[
+  {
+    "etablissement": {
+      "nomEtab": "Lycée ABC",
+      "nomChefEtab": "Nicolas Martin",
+      "caracteristiqueEtab": "Public",
+      "adresseEtab": {
+        "ville": "Lyon",
+        "quartier": "Presqu'île",
+        "codePostal": "69001"
+      }
+    }
+  },
+  {
+    "etablissement": {
+      "nomEtab": "Université XYZ",
+      "nomChefEtab": "Sophie Dupont",
+      "caracteristiqueEtab": "Privé",
+      "adresseEtab": {
+        "ville": "Paris",
+        "quartier": "Saint-Germain",
+        "codePostal": "75006"
+      }
+    }
+  },
+  {
+    "etablissement": {
+      "nomEtab": "École Maternelle ABCD",
+      "nomChefEtab": "Marie Lefevre",
+      "caracteristiqueEtab": "Public",
+      "adresseEtab": {
+        "ville": "Marseille",
+        "quartier": "Cours Julien",
+        "codePostal": "13006"
+      }
+    }
+  }
+]

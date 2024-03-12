@@ -1,0 +1,83 @@
+[
+  {
+    "contrat": {
+      "natureContrat": "CDI",
+      "dateContrat": "Sun Mar 10 2024 19:12:25 GMT+0300",
+      "usager": {
+        "nomUsager": "Dupont",
+        "prenomUsager": "Jean",
+        "adresseUsager": "123 Rue de la République",
+        "dateNaissanceUsager": "Sun Mar 10 2024 19:12:25 GMT+0300"
+      },
+      "etablissement": {
+        "nomEtab": "École Primaire ABC",
+        "nomChefEtab": "Martin Durand",
+        "caracteristiqueEtab": "Public",
+        "adresseEtab": {
+          "ville": "Paris",
+          "quartier": "Marais",
+          "codePostal": "75001"
+        }
+      },
+      "agent": {
+        "codeAgent": "AG123",
+        "nomAgent": "Lefevre",
+        "prenomAgent": "Sophie"
+      }
+    }
+  },
+  {
+    "contrat": {
+      "natureContrat": "CDD",
+      "dateContrat": "Mon Jun 15 2023 14:30:00 GMT+0300",
+      "usager": {
+        "nomUsager": "Martin",
+        "prenomUsager": "Sophie",
+        "adresseUsager": "456 Avenue des Lilas",
+        "dateNaissanceUsager": "Wed Nov 12 1985 10:45:00 GMT+0300"
+      },
+      "etablissement": {
+        "nomEtab": "Collège XYZ",
+        "nomChefEtab": "Isabelle Lacroix",
+        "caracteristiqueEtab": "Privé",
+        "adresseEtab": {
+          "ville": "Marseille",
+          "quartier": "Vieux-Port",
+          "codePostal": "13001"
+        }
+      },
+      "agent": {
+        "codeAgent": "AG456",
+        "nomAgent": "Dubois",
+        "prenomAgent": "Pierre"
+      }
+    }
+  },
+  {
+    "contrat": {
+      "natureContrat": "Stage",
+      "dateContrat": "Thu Feb 22 2023 09:00:00 GMT+0300",
+      "usager": {
+        "nomUsager": "Girard",
+        "prenomUsager": "Julie",
+        "adresseUsager": "789 Rue des Cerisiers",
+        "dateNaissanceUsager": "Sat Sep 30 1995 12:15:00 GMT+0300"
+      },
+      "etablissement": {
+        "nomEtab": "Lycée ABC",
+        "nomChefEtab": "Nicolas Martin",
+        "caracteristiqueEtab": "Public",
+        "adresseEtab": {
+          "ville": "Lyon",
+          "quartier": "Presqu'île",
+          "codePostal": "69001"
+        }
+      },
+      "agent": {
+        "codeAgent": "AG789",
+        "nomAgent": "Leclerc",
+        "prenomAgent": "Alice"
+      }
+    }
+  }
+]

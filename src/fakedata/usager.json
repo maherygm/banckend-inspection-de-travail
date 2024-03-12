@@ -1,0 +1,38 @@
+[
+  {
+    "usager": {
+      "nom": "Dupont",
+      "prenom": "Jean",
+      "adresse": {
+        "quartier": "Centre-ville",
+        "ville": "Paris"
+      },
+      "typeUsager": "Étudiant",
+      "classificationProfessionel": "Niveau BAC"
+    }
+  },
+  {
+    "usager": {
+      "nom": "Girard",
+      "prenom": "Sophie",
+      "adresse": {
+        "quartier": "Quartier résidentiel",
+        "ville": "Lyon"
+      },
+      "typeUsager": "Employé",
+      "classificationProfessionel": "Cadre"
+    }
+  },
+  {
+    "usager": {
+      "nom": "Martin",
+      "prenom": "Lucie",
+      "adresse": {
+        "quartier": "Banlieue",
+        "ville": "Marseille"
+      },
+      "typeUsager": "Client",
+      "classificationProfessionel": "Indépendant"
+    }
+  }
+]
