@@ -1,14 +1,11 @@
 const multer = require("multer");
 const Utilisateur = require("../models/Utilisateur");
-const useGenerateImageUrl = require("../utils/useGenerateImageUrl");
+const GenerateImageUrl = require("../utils/GenerateImageUrl");
 exports.getAllUtilisateurs = (req, res, next) => {
   Utilisateur.find({})
     .then((Utilisateurs) => {
       const utilisateursAvecUrl = Utilisateurs.map((util) => {
-        util.image.contentType = useGenerateImageUrl(
-          req,
-          util.image.contentType
-        );
+        util.image.contentType = GenerateImageUrl(req, util.image.contentType);
       });
       res.send(utilisateursAvecUrl);
     })
@@ -18,12 +15,10 @@ exports.getAllUtilisateurs = (req, res, next) => {
 };
 exports.getUtilisateurById = (req, res, next) => {
   const id = req.params.UtilisateurId;
-  console.log(id);
-
   Utilisateur.findById(id)
     .then((Utilisateur) => {
       const UtilisateurAvecUrl = (Utilisateur.image.contentType =
-        useGenerateImageUrl(req, util.image.contentType));
+        GenerateImageUrl(req, util.image.contentType));
       res.status(200).send({
         response: UtilisateurAvecUrl,
       });
@@ -55,7 +50,7 @@ exports.createUtilisateur = (req, res, next) => {
       return res.status(500).send({ error: err });
     }
     const body = req.body;
-    const imageUrl = useGenerateImageUrl(req, req.file.path);
+    const imageUrl = GenerateImageUrl(req, req.file.path);
     console.log("hy ", body);
 
     const UtilisateurNew = new Utilisateur({

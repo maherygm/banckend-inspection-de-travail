@@ -13,6 +13,7 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 app.use("/api", routes);
+app.use("/upload", express.static("upload"));
 
 //lancement du serveur
 app.listen(PORT, () => {
