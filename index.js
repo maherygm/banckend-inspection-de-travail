@@ -13,7 +13,7 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 app.use("/api", routes);
-app.use("/upload", express.static("upload"));
+app.use("/uploads", express.static("uploads"));
 
 //lancement du serveur
 app.listen(PORT, () => {
@@ -21,7 +21,7 @@ app.listen(PORT, () => {
 
   //connection a la bd
   mongoose
-    .connect(db, { useNewUrlParser: true, useUnifiedTopology: true })
+    .connect(db)
     .then(() => console.log("Successfully connected to the database"))
     .catch((err) => console.error(err));
 });

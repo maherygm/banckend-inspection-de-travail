@@ -51,7 +51,6 @@ exports.createUtilisateur = (req, res, next) => {
     }
     const body = req.body;
     const imageUrl = GenerateImageUrl(req, req.file.path);
-    console.log("hy ", body);
 
     const UtilisateurNew = new Utilisateur({
       ...body,

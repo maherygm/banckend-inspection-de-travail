@@ -3,36 +3,26 @@
     "usager": {
       "nom": "Dupont",
       "prenom": "Jean",
-      "adresse": {
-        "quartier": "Centre-ville",
-        "ville": "Paris"
-      },
-      "typeUsager": "Étudiant",
-      "classificationProfessionel": "Niveau BAC"
+      "adresse": "Centre-ville",
+      "sexe": "Homme"
     }
   },
   {
     "usager": {
       "nom": "Girard",
       "prenom": "Sophie",
-      "adresse": {
-        "quartier": "Quartier résidentiel",
-        "ville": "Lyon"
-      },
-      "typeUsager": "Employé",
-      "classificationProfessionel": "Cadre"
+      "adresse": "Quartier résidentiel",
+
+      "sexe": "Femme"
     }
   },
   {
     "usager": {
       "nom": "Martin",
       "prenom": "Lucie",
-      "adresse": {
-        "quartier": "Banlieue",
-        "ville": "Marseille"
-      },
-      "typeUsager": "Client",
-      "classificationProfessionel": "Indépendant"
+      "adresse": "Banlieue",
+
+      "sexe": "Homme"
     }
   }
 ]

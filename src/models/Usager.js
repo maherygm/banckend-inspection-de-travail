@@ -5,12 +5,8 @@ const UsagerSchema = new Schema({
   usager: {
     nom: String,
     prenom: String,
-    adresse: {
-      quartier: String,
-      ville: String,
-    },
-    typeUsager: String,
-    classificationProfessionel: String,
+    adresse: String,
+    sexe: String,
   },
 });
 
