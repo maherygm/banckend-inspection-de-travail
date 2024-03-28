@@ -13,6 +13,7 @@ const UtilisateurSchema = new Schema({
       typeUtilisateur: String,
     },
     image: {
+      data: String,
       contentType: String,
     },
     motsDePasse: String,

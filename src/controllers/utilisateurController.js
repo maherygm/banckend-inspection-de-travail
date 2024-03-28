@@ -1,13 +1,22 @@
 const multer = require("multer");
 const Utilisateur = require("../models/Utilisateur");
-const GenerateImageUrl = require("../utils/GenerateImageUrl");
+// const GenerateImageUrl = require("../utils/GenerateImageUrl");
+
+function GenerateImageUrl(req, imagePath) {
+  console.log(req.protocol);
+  return `${req.protocol}://${req.get("host")}/uploads/${imagePath}`;
+}
 exports.getAllUtilisateurs = (req, res, next) => {
   Utilisateur.find({})
     .then((Utilisateurs) => {
-      const utilisateursAvecUrl = Utilisateurs.map((util) => {
-        util.image.contentType = GenerateImageUrl(req, util.image.contentType);
-      });
-      res.send(utilisateursAvecUrl);
+      Utilisateurs.map(
+        (util) =>
+          (util.utilisateur.image.contentType = GenerateImageUrl(
+            req,
+            util.utilisateur.image.contentType
+          ))
+      );
+      res.send(Utilisateurs);
     })
     .catch((err) => {
       res.status(400).send(err);
@@ -17,10 +26,12 @@ exports.getUtilisateurById = (req, res, next) => {
   const id = req.params.UtilisateurId;
   Utilisateur.findById(id)
     .then((Utilisateur) => {
-      const UtilisateurAvecUrl = (Utilisateur.image.contentType =
-        GenerateImageUrl(req, util.image.contentType));
+      Utilisateur.utilisateur.image.contentType = GenerateImageUrl(
+        req,
+        Utilisateur.utilisateur.image.contentType
+      );
       res.status(200).send({
-        response: UtilisateurAvecUrl,
+        response: Utilisateur,
       });
     })
     .catch((err) => {
@@ -50,18 +61,22 @@ exports.createUtilisateur = (req, res, next) => {
       return res.status(500).send({ error: err });
     }
     const body = req.body;
-    const imageUrl = GenerateImageUrl(req, req.file.path);
+    const imageUrl = req.file.path;
 
     const UtilisateurNew = new Utilisateur({
       ...body,
       image: {
+        data: "",
         contentType: imageUrl,
       },
     });
 
     UtilisateurNew.save()
       .then((response) => {
-        res.status(200).send("Utilisateur successfully added");
+        res.status(200).send({
+          message: "Utilisateur successfully added",
+          response: response,
+        });
       })
       .catch((err) => {
         res.status(400).send({

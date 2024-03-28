@@ -7,6 +7,7 @@ const UsagerSchema = new Schema({
     prenom: String,
     adresse: String,
     sexe: String,
+    mdp: String,
   },
 });
 

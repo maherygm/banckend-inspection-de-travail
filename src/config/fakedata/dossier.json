@@ -1,0 +1,28 @@
+[
+  {
+    "dossier": {
+      "usager": {
+        "nom": "Dupont",
+        "prenom": "Jean",
+        "adresse": "Centre-ville",
+        "sexe": "Homme"
+      },
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium doloremque voluptatum repudiandae, incidunt a eius ad reiciendis eum qui saepe dignissimos nam? Ducimus perspiciatis quibusdam, est explicabo totam cupiditate cum a assumenda quaerat impedit in harum at atque earum voluptatem obcaecati voluptatum quos ex veniam reprehenderit. Rerum illum ipsam perferendis?",
+      "date": "Wed Mar 27 2024 14:14:58 GMT+0300",
+      "etats": "en cours"
+    }
+  },
+  {
+    "dossier": {
+      "usager": {
+        "nom": "Dupont",
+        "prenom": "Jean",
+        "adresse": "Centre-ville",
+        "sexe": "Homme"
+      },
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium doloremque voluptatum repudiandae, incidunt a eius ad reiciendis eum qui saepe dignissimos nam? Ducimus perspiciatis quibusdam, est explicabo totam cupiditate cum a assumenda quaerat impedit in harum at atque earum voluptatem obcaecati voluptatum quos ex veniam reprehenderit. Rerum illum ipsam perferendis?",
+      "date": "Wed Mar 27 2024 14:14:58 GMT+0300",
+      "etats": "en cours"
+    }
+  }
+]

@@ -32,7 +32,10 @@ exports.createUsager = (req, res, next) => {
   const UsagerNew = new Usager(body);
   UsagerNew.save()
     .then((response) => {
-      res.status(200).send("Usager successfully added");
+      res.status(200).send({
+        message: "Usager successfully added",
+        response: response,
+      });
     })
     .catch((err) => {
       res.status(400).send({

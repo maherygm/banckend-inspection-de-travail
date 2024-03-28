@@ -7,6 +7,7 @@ const reglementInterieurRoutes = require("./reglementInterieurRoutes");
 const secretaireRoutes = require("./secretaireRoutes");
 const usagerRoutes = require("./usagerRoutes");
 const utilisateurRoutes = require("./utilisateurRoutes");
+const dossierRoutes = require("./dossierRoutes");
 
 const router = express.Router();
 
@@ -18,5 +19,6 @@ router.use("/reglementInterieur", reglementInterieurRoutes);
 router.use("/secretaire", secretaireRoutes);
 router.use("/usager", usagerRoutes);
 router.use("/utilisateur", utilisateurRoutes);
+router.use("/dossier", dossierRoutes);
 
 module.exports = router;
