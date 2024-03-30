@@ -1,11 +1,8 @@
 const multer = require("multer");
 const Utilisateur = require("../models/Utilisateur");
-// const GenerateImageUrl = require("../utils/GenerateImageUrl");
+const GenerateImageUrl = require("../utils/GenerateImageUrl");
+const fs = require("fs");
 
-function GenerateImageUrl(req, imagePath) {
-  console.log(req.protocol);
-  return `${req.protocol}://${req.get("host")}/uploads/${imagePath}`;
-}
 exports.getAllUtilisateurs = (req, res, next) => {
   Utilisateur.find({})
     .then((Utilisateurs) => {
@@ -16,6 +13,7 @@ exports.getAllUtilisateurs = (req, res, next) => {
             util.utilisateur.image.contentType
           ))
       );
+
       res.send(Utilisateurs);
     })
     .catch((err) => {
@@ -60,14 +58,16 @@ exports.createUtilisateur = (req, res, next) => {
     } else if (err) {
       return res.status(500).send({ error: err });
     }
-    const body = req.body;
+    const body = req.body.utilisateur;
     const imageUrl = req.file.path;
 
     const UtilisateurNew = new Utilisateur({
-      ...body,
-      image: {
-        data: "",
-        contentType: imageUrl,
+      utilisateur: {
+        ...body,
+        image: {
+          data: "",
+          contentType: imageUrl,
+        },
       },
     });
 
@@ -122,10 +122,14 @@ exports.deleteUtilisateur = (req, res, next) => {
           error: "Utilisateur not found",
         });
       }
+
       res.status(200).send({
         message: "Utilisateur successfully deleted",
         remainingUtilisateur: deletedUtilisateur,
       });
+      fs.unlinkSync(
+        `./uploads/${deletedUtilisateur.utilisateur.image.contentType}`
+      );
     })
     .catch((err) => {
       res.status(400).send({
