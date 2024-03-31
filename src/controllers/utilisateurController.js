@@ -59,11 +59,12 @@ exports.createUtilisateur = (req, res, next) => {
       return res.status(500).send({ error: err });
     }
     const body = req.body.utilisateur;
-    const imageUrl = req.file.path;
+    const imageUrl = req.file.filename;
 
+    console.log("image url ", imageUrl);
     const UtilisateurNew = new Utilisateur({
       utilisateur: {
-        ...body,
+        ...JSON.parse(body),
         image: {
           data: "",
           contentType: imageUrl,
