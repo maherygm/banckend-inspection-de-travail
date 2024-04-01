@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-const agentSchema = new Schema({
+const plainteSchema = new Schema({
   dossier: {
     usager: {
       nom: String,
@@ -16,6 +16,6 @@ const agentSchema = new Schema({
   },
 });
 
-const dossier = mongoose.model("dossier", agentSchema);
+const plainte = mongoose.model("plainte", plainteSchema);
 
-module.exports = dossier;
+module.exports = plainte;

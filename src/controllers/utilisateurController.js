@@ -87,11 +87,30 @@ exports.createUtilisateur = (req, res, next) => {
   });
 };
 
+function removeBaseUrl(req, str) {
+  return str.substring(
+    [...`${req.protocol}://${req.get("host")}/uploads/`].length
+  );
+}
 exports.updateUtilisateur = (req, res, next) => {
   const UtilisateurId = req.params.UtilisateurId;
   const updateBody = req.body;
 
-  Utilisateur.findOneAndUpdate({ _id: UtilisateurId }, updateBody, {
+  const bodyremovedUrl = {
+    ...updateBody,
+    utilisateur: {
+      ...updateBody.utilisateur,
+      image: {
+        ...updateBody.utilisateur.image,
+        contentType: removeBaseUrl(
+          req,
+          updateBody.utilisateur.image.contentType
+        ),
+      },
+    },
+  };
+
+  Utilisateur.findOneAndUpdate({ _id: UtilisateurId }, bodyremovedUrl, {
     new: true,
     overwrite: true,
   })
@@ -101,6 +120,11 @@ exports.updateUtilisateur = (req, res, next) => {
           error: "Utilisateur not found",
         });
       }
+
+      updtatedUtilisateur.utilisateur.image.contentType = GenerateImageUrl(
+        req,
+        updtatedUtilisateur.utilisateur.image.contentType
+      );
       res.status(200).send({
         message: "Utilisateur successfully updated",
         Utilisateur: updtatedUtilisateur,
